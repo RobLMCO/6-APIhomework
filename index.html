@@ -1,139 +1,151 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title> Weather Py </title>
-    </head>
-    
-    <body>
-        <!-- On your own, create a simple bio page for yourself using the following HTML elements...
-  * A header that will store your name inside of it
-  * An image that will act as a stand-in for your picture with an `alt` attribute which gives a very basic description of the image
-  * Two paragraphs that will have text describing who you are
-  * An unordered list of links that connect to your social media pages
-  * A table that will contain three columns and some data on your favorite movies, songs, books, or activities-->
-  <div class="container">
-    <nav class="navbar">
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="Clouds.html">Clouds</a>
-        </li>
-        <li>
-          <a href="Temperature.html">Temperature</a>
-        </li>
-        <li>
-          <a href="Humidity.html">Humidity</a>
-        </li>
-        <li>
-          <a href="Wind.html">Wind</a>
-        </li>
-        <li>
-          <a href="Comparisons.html">Comparisons</a>
-        </li>
-        <li>
-          <a href="Data.html">Data</a>
-        </li>
-      </ul>
-      <select id="nav-select">
-        <option value="Home">Home</option>
-        <option value="Clouds">Clouds</option>
-        <option value="Temperature">Temperature</option>
-        <option value="Humidity">Humidity</option>
-        <option value="Wind">Wind</option>
-        <option value="Comparisons">Comparisons</option>
-        <option value="Data">Data</option>
-      </select>
-      <div class="clearfix"></div>
-    </nav>
-    <header class="header">
-      <h1> PROJECT PAGE: Weather Py </h1>
-        <h3> by Rob Phillips </h3><BR>
-        <strong> <h3> KEY OBSERVATIONS </h3></strong>
-        <img src="Lat_v_Lon_v_Temp.png" alt= "This is a graph of the temperature at cities by Lat and Long"/><BR>
+  <head>
+    <meta charset="UTF-8">
+    <title> Wind </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+  </head>
+
+  <body>
+   <div class="row">
+		<div class="col-md-12">
+		  <nav class="navbar navbar-default">
+			  <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand"  href="index.html"><img src="https://media.giphy.com/media/IdadT8pNEQ2Szir5Wj/giphy.gif"  alt= "WeatherPy" width="144" height="84" align="left"/></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span><BR><BR>
+            </button>
+            </div>
+            
+			  </div>
+
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+				  
+				  <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+					  <li><a href="Temperature.html">Temperature</a></li>
+					  <li><a href="Humidity.html">Humidity</a></li>
+					  <li><a href="Clouds.html">Clouds</a></li>
+					  <li><a href="Wind.html">Wind</a></li>
+					</ul>
+					<li><a href="Comparisons.html">Comparisons</a></li>
+					<li><a href="Data.html">Data</a></li><BR><BR>
+				  </li>
+				</ul>
+			  </div>
+      </nav>
+		</div>
+	</div>
+	  <header>
+      <h2> Weather Py Project by Rob Phillips </h2><BR>
+      <strong> <h3> Objective </h3></strong>
+    </header>
+
+    <div class="row">
+        <div class="col-md-8">
           
-            Higher temperatures are between the tropical latitudes of -23.5 (Capricorn) to 23.5 (Cancer). <BR>
-            Much lower temperatures in the higher latitudes compared with the lower latitudes - there happens to be more cities in the most northern latitudes compared with the southern latitudes (based on land mass)
+            Whether financial, political, or social -- data's true power lies in its ability to answer questions definitively. So let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What's the weather like as we approach the equator?"
+
+            Now, we know what you may be thinking: _"Duh. It gets hotter..."_
+            
+            But, if pressed, how would you **prove** it?
+
+            In this example, you'll be creating a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator.
+
+            Your objective is to build a series of scatter plots to showcase the following relationships:
+            <ul>
+            <li> Temperature (F) vs. Latitude </li>
+            <li>  Humidity (%) vs. Latitude</li>
+            <li>  Cloudiness (%) vs. Latitude</li>
+            <li>  Wind Speed (mph) vs. Latitude</li>
+            </ul>
+            <BR>
+            Your final notebook must:
+            <ul>
+            <li>  Randomly select **at least** 500 unique (non-repeat) cities based on latitude and longitude.</li>
+            <li>  Perform a weather check on each of the cities using a series of successive API calls.</li>
+            <li>  Include a print log of each city as it's being processed with the city number and city name.</li>
+            <li>  Save both a CSV of all data retrieved and png images for each scatter plot.</li>
+            </ul>
+            <BR>
+            As final considerations:
+            <ul>
+            <li>  You must complete your analysis using a Jupyter notebook.</li>
+            <li>  You must use the Matplotlib or Pandas plotting libraries.</li>
+            <li>  You must include a written description of three observable trends based on the data.</li>
+            <li>  You must use proper labeling of your plots, including aspects like: Plot Titles (with date of analysis) and Axes Labels.</li>
+            </ul>
+            <BR>
+        </div>
+        
+        <div class="col-md-2">
+          <h3> Visualizations </h3>
+            <h6> Comparisons </h6>
+          <a target="_blank" href="Comparisons.html">
+            <img src="Lat_v_Lon_v_Temp.png" alt= "This is a graph of the temperature at cities by Lat and Long" width ="80%">
+            </a>
+        </div>
+        <div class="col-md-2">
+          
+        </div>
+        <div class="row">
+            
+            
+            <div class="col-md-2">
+                <h6> Latitude vs Temperature </h6>
+              <a target="_blank" href="Temperature.html">
+              <img src="Lat_v_Temp.png" alt="Latitude vs Temperature" width ="80%">
+              </a>
+            </div>
+            <div class="col-md-2">
+                <h6> Latitude vs Humidity </h6>
+              <a target="_blank" href="Humidity.html">
+              <img src="Lat_v_Humid.png" alt="Latitude vs Humidity" width ="80%">
+              </a>
+            </div>
+            <div class="col-md-2" "col-md-2">
+                <h6> Latitude vs Wind Speed  </h6>
+              <a target="_blank" href="Wind.html">
+              <img src="Lat_v_Wind.png" alt="Latitude vs Wind" width ="80%">
+              </a>
+            </div>
+            <div class="col-md-2" "col-md-2">
+                <h6> Latitude vs Cloudiness </h6>
+              <a target="_blank" href="Clouds.html">
+              <img src="Lat_v_Clouds.png" alt="Latitude vs Clouds" width ="80%">
+              </a>
+            </div>
+        
+           </div>
+        
+        </div>
+          
+            
             <BR>
             
-          
-                 <!-- ** Create an unordered list of social media links.-->
+              <h3>Project Files</h3>
+                 <!-- ** Create an unordered list -->
         <ul>
             <li><a href="WeatherPy.ipynb">WeatherPy Code</a></li>
             <li><a href="cityweather.csv">City Weather CSV</a></li>
             <li><a href="WeatherPy_Analysis.htm">Full Analysis</a></li>
         </ul>
-        <table border="1">
-          <thead>
-            <tr>
-            <th colspan="4">Graphs</th></tr>
-            <tr>
-            <th>Clouds</th>
-            <th>Humid</th>
-            <th>Temp</th>
-            </tr>
-            </thead>
-            <tbody>
-              <tr>
-
-              <td><img src="Lat_v_Clouds.png" alt= "Lat v Clouds"/></td>
-              <td><img src="Lat_v_Humid.png" alt= "Lat v Humid"/></td>
-              <td><img src="Lat_v_Temp.png" alt= "Lat v Temp"/></td>
-
-              </tr>
-            </tbody>
-        </table>
+       
     </body>
-    </header>
+     
+
     <main>
-      <section class="posts">
-        <article class="post">
-          <h3>Ut nulla exercitation ad eu et amet nisi dolor.</h3>
-          <p>Nisi quis consectetur excepteur cillum dolor minim. Reprehenderit do qui veniam dolor in ea cupidatat eiusmod ad adipisicing nulla officia dolor sit. Anim fugiat eu enim in ex est deserunt laborum commodo incididunt consectetur consectetur.
-            Ullamco nulla nulla cillum elit reprehenderit officia magna excepteur. Fugiat occaecat veniam eu amet veniam tempor fugiat magna exercitation amet veniam mollit pariatur. Minim adipisicing cupidatat est do est id ex reprehenderit quis enim
-            elit consectetur sint.
-          </p>
-        </article>
-        <article class="post">
-          <h3>Ut nulla exercitation ad eu et amet nisi dolor.</h3>
-          <p>Nisi quis consectetur excepteur cillum dolor minim. Reprehenderit do qui veniam dolor in ea cupidatat eiusmod ad adipisicing nulla officia dolor sit. Anim fugiat eu enim in ex est deserunt laborum commodo incididunt consectetur consectetur.
-            Ullamco nulla nulla cillum elit reprehenderit officia magna excepteur. Fugiat occaecat veniam eu amet veniam tempor fugiat magna exercitation amet veniam mollit pariatur. Minim adipisicing cupidatat est do est id ex reprehenderit quis enim
-            elit consectetur sint.
-          </p>
-        </article>
-        <article class="post">
-          <h3>Ut nulla exercitation ad eu et amet nisi dolor.</h3>
-          <p>Nisi quis consectetur excepteur cillum dolor minim. Reprehenderit do qui veniam dolor in ea cupidatat eiusmod ad adipisicing nulla officia dolor sit. Anim fugiat eu enim in ex est deserunt laborum commodo incididunt consectetur consectetur.
-            Ullamco nulla nulla cillum elit reprehenderit officia magna excepteur. Fugiat occaecat veniam eu amet veniam tempor fugiat magna exercitation amet veniam mollit pariatur. Minim adipisicing cupidatat est do est id ex reprehenderit quis enim
-            elit consectetur sint.
-          </p>
-        </article>
-        <article class="post">
-          <h3>Ut nulla exercitation ad eu et amet nisi dolor.</h3>
-          <p>Nisi quis consectetur excepteur cillum dolor minim. Reprehenderit do qui veniam dolor in ea cupidatat eiusmod ad adipisicing nulla officia dolor sit. Anim fugiat eu enim in ex est deserunt laborum commodo incididunt consectetur consectetur.
-            Ullamco nulla nulla cillum elit reprehenderit officia magna excepteur. Fugiat occaecat veniam eu amet veniam tempor fugiat magna exercitation amet veniam mollit pariatur. Minim adipisicing cupidatat est do est id ex reprehenderit quis enim
-            elit consectetur sint.
-          </p>
-        </article>
-        <article class="post">
-          <h3>Ut nulla exercitation ad eu et amet nisi dolor.</h3>
-          <p>Nisi quis consectetur excepteur cillum dolor minim. Reprehenderit do qui veniam dolor in ea cupidatat eiusmod ad adipisicing nulla officia dolor sit. Anim fugiat eu enim in ex est deserunt laborum commodo incididunt consectetur consectetur.
-            Ullamco nulla nulla cillum elit reprehenderit officia magna excepteur. Fugiat occaecat veniam eu amet veniam tempor fugiat magna exercitation amet veniam mollit pariatur. Minim adipisicing cupidatat est do est id ex reprehenderit quis enim
-            elit consectetur sint.
-          </p>
-        </article>
-        <article class="post">
-          <h3>Ut nulla exercitation ad eu et amet nisi dolor.</h3>
-          <p>Nisi quis consectetur excepteur cillum dolor minim. Reprehenderit do qui veniam dolor in ea cupidatat eiusmod ad adipisicing nulla officia dolor sit. Anim fugiat eu enim in ex est deserunt laborum commodo incididunt consectetur consectetur.
-            Ullamco nulla nulla cillum elit reprehenderit officia magna excepteur. Fugiat occaecat veniam eu amet veniam tempor fugiat magna exercitation amet veniam mollit pariatur. Minim adipisicing cupidatat est do est id ex reprehenderit quis enim
-            elit consectetur sint.
-          </p>
-        </article>
-      </section>
+      
     </main>
   </div>      
-  
-  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</body> 
 </html>
